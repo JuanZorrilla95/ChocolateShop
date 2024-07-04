@@ -30,7 +30,7 @@
                                         {{ $product->description }}
                                     </td>
                                     <td>
-                                    {{ $product->price }}
+                                    ${{ $product->price }} ARS
                                     </td>
                                     <td>
                                         <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning ">Edit</a>
@@ -50,6 +50,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div><br>
+    
+    
 @endsection
