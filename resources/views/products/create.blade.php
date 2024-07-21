@@ -17,8 +17,8 @@
                                 <input type="text" class="form-control" name= "description"><br>
                             </div>
                             <div class= "form-group">
-                                <label for="">Price</label><br>
-                                <input type="number" class="form-control" name= "price"><br>
+                                <label for="" >Price</label><br>
+                                <input placeholder="$" type="number" class="form-control" name= "price"><br>
                             </div>
                             <button type="submit" class="btn btn-primary">Save</button>
                             <a href= "{{ route('products.index') }}" class="btn btn-danger">Cancel</a>

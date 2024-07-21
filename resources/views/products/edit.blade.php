@@ -10,16 +10,16 @@
                     <span>Edit product</span>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('products.edit', $products->id) }}" method="POST"> <!-- envia por post -->
+                        <form action="{{ route('products.update', $product->id) }}" method="POST"> <!-- envia por post -->
                             @method('PUT') <!-- el form no permite metodo put por eso se usa esta directiva-->
                             @csrf <!-- para enviar un form con Laravel añadir csrf. sirve para verificar la autenticidad de la info -->
                             <div class= "form-group">
                                 <label for="">Description</label>
-                                <input type="text" class="form-control" value="{{ $products->description }}" name= "description"><br> <!--le pasamos el valor del product y accedemos a su descripcion -->
+                                <input type="text" class="form-control" value="{{ $product->description }}" name= "description"><br> <!--le pasamos el valor del product y accedemos a su descripcion -->
                             </div>
                             <div class= "form-group">
                                 <label for="">Price</label><br>
-                                <input type="number" class="form-control" value="{{ $products->price }}" name= "price"><br>
+                                <input type="number" class="form-control" value="{{ $product->price }}" name= "price"><br>
                             </div>
                             <button type="submit" class="btn btn-primary">Save</button>
                             <a href= "{{ route('products.index') }} " class="btn btn-danger">Cancel</a>
