@@ -24,7 +24,7 @@
                                 <th>Action</th>
                             </thead>
                             <tbody>
-                                @foreach($products as $product)
+                                @foreach($product as $product)
                                 <tr>
                                     <td>
                                         {{ $product->description }}
@@ -47,6 +47,14 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <span>Bienvenido {{ auth()->user()->name }}</span>
+                        <a href="javascript: document.getElementById('logout').submit()" class="btn btn-danger btn-sm">Cerrar sesión</a> 
+                        <form action="{{ route('logout') }}" id="logout" style="display:none" method="POST">
+                            @csrf
+                        </form>
+                    </div>
+                    
                 </div>
             </div>
         </div>
